@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미술 비평 수업 지도안</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Sans KR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <h1 class="text-xl md:text-2xl font-bold text-teal-700">미술 비평 수업 지도안</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="text-stone-600 hover:text-teal-600 transition">수업 개요</a>
+                    <a href="#lenses" class="text-stone-600 hover:text-teal-600 transition">비평의 렌즈</a>
+                    <a href="#plan" class="text-stone-600 hover:text-teal-600 transition">차시별 계획</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-stone-600 hover:text-teal-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-stone-200">
+            <a href="#overview" class="block py-2 px-4 text-sm text-stone-600 hover:bg-teal-50">수업 개요</a>
+            <a href="#lenses" class="block py-2 px-4 text-sm text-stone-600 hover:bg-teal-50">비평의 렌즈</a>
+            <a href="#plan" class="block py-2 px-4 text-sm text-stone-600 hover:bg-teal-50">차시별 계획</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section id="overview" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-stone-800 mb-4">수업 개요 🎨</h2>
+            <p class="text-lg text-stone-600 mb-6">
+                안녕하세요, 멋진 1학년 친구들! 미술은 우리에게 다양한 이야기를 건네는 친구와 같아요. 때로는 즐거움을 주고, 때로는 생각할 거리를 던져주죠. 이번 수업에서는 **미술 비평**이라는 활동을 통해 이 친구의 이야기를 더 깊이 듣고, 나만의 언어로 그 이야기를 풀어내는 방법을 배워볼 거예요. 특히, 최신 기술인 **미술 비평 챗봇**을 활용하여 비평을 더욱 쉽고 재미있게 접근하고, 여러분의 생각을 정리하는 데 도움을 받을 겁니다.
+            </p>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                <h3 class="text-xl font-bold text-teal-700 mb-4">수업 목표</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="text-teal-500 mr-3 mt-1">✓</span>
+                        <span>미술 비평의 다양한 관점(맥락주의, 인상주의, 의도주의, 형식주의, 도상학, 전체주의 비평)을 이해한다.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-teal-500 mr-3 mt-1">✓</span>
+                        <span>미술 비평 챗봇을 활용하여 작품을 분석하고 해석하는 능력을 기른다.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-teal-500 mr-3 mt-1">✓</span>
+                        <span>자신만의 비평적 시각으로 작품에 대한 글을 작성할 수 있다.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="lenses" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-stone-800 mb-2">비평의 렌즈 🔍</h2>
+            <p class="text-lg text-stone-600 mb-8">작품을 다양한 각도에서 바라보는 6가지 렌즈를 탐험해 보세요. 각 카드를 클릭하면 자세한 설명이 나타납니다.</p>
+            <div id="lens-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Lenses will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section id="plan" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-stone-800 mb-8">차시별 계획 🗓️</h2>
+            <div class="flex border-b border-stone-300 mb-6">
+                <button data-tab="1" class="tab-button py-2 px-4 border-b-2 active-tab">1차시: 렌즈 익히기</button>
+                <button data-tab="2" class="tab-button py-2 px-4 border-b-2 border-transparent">2차시: 이야기 파헤치기</button>
+                <button data-tab="3" class="tab-button py-2 px-4 border-b-2 border-transparent">3차시: 나도 비평가!</button>
+            </div>
+            <div id="tab-content-1" class="tab-content active"></div>
+            <div id="tab-content-2" class="tab-content"></div>
+            <div id="tab-content-3" class="tab-content"></div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-800 text-white mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+            <p>고등학교 1학년 미술 비평 수업 지도안</p>
+            <p class="text-sm text-stone-400 mt-1">© 2023. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
